@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3F3CD0FED45DCC03DA2A531A /* Pods_News.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73870945AB4232DED8610B55 /* Pods_News.framework */; };
+		5E3C61D6C75495BDBAF6ACD0 /* Pods_News.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73870945AB4232DED8610B55 /* Pods_News.framework */; };
 		9BF2E78320B0D54C00D09D2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF2E78220B0D54C00D09D2D /* AppDelegate.swift */; };
 		9BF2E78520B0D54C00D09D2D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF2E78420B0D54C00D09D2D /* ViewController.swift */; };
 		9BF2E78820B0D54C00D09D2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BF2E78620B0D54C00D09D2D /* Main.storyboard */; };
 		9BF2E78A20B0D54E00D09D2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BF2E78920B0D54E00D09D2D /* Assets.xcassets */; };
 		9BF2E78D20B0D54E00D09D2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BF2E78B20B0D54E00D09D2D /* LaunchScreen.storyboard */; };
+		9BF2E79920B0DAC700D09D2D /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF2E79820B0DAC700D09D2D /* NetworkingManager.swift */; };
+		9BF2E79C20B0DB3200D09D2D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF2E79B20B0DB3200D09D2D /* Constants.swift */; };
+		9BF2E79E20B0DBCD00D09D2D /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF2E79D20B0DBCD00D09D2D /* Endpoint.swift */; };
+		9BF2E7A220B1585D00D09D2D /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF2E7A120B1585D00D09D2D /* Object.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		9BF2E78920B0D54E00D09D2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9BF2E78C20B0D54E00D09D2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9BF2E78E20B0D54E00D09D2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BF2E79820B0DAC700D09D2D /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		9BF2E79B20B0DB3200D09D2D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9BF2E79D20B0DBCD00D09D2D /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		9BF2E7A120B1585D00D09D2D /* Object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,7 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F3CD0FED45DCC03DA2A531A /* Pods_News.framework in Frameworks */,
+				5E3C61D6C75495BDBAF6ACD0 /* Pods_News.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,13 +87,57 @@
 			isa = PBXGroup;
 			children = (
 				9BF2E78220B0D54C00D09D2D /* AppDelegate.swift */,
-				9BF2E78420B0D54C00D09D2D /* ViewController.swift */,
-				9BF2E78620B0D54C00D09D2D /* Main.storyboard */,
+				9BF2E79A20B0DB1C00D09D2D /* Helpers */,
+				9BF2E79420B0D95200D09D2D /* Networking */,
+				9BF2E79520B0D95F00D09D2D /* Models */,
+				9BF2E79620B0D96600D09D2D /* Views */,
+				9BF2E79720B0D96A00D09D2D /* Controllers */,
 				9BF2E78920B0D54E00D09D2D /* Assets.xcassets */,
+				9BF2E78620B0D54C00D09D2D /* Main.storyboard */,
 				9BF2E78B20B0D54E00D09D2D /* LaunchScreen.storyboard */,
 				9BF2E78E20B0D54E00D09D2D /* Info.plist */,
 			);
 			path = News;
+			sourceTree = "<group>";
+		};
+		9BF2E79420B0D95200D09D2D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				9BF2E79820B0DAC700D09D2D /* NetworkingManager.swift */,
+				9BF2E79D20B0DBCD00D09D2D /* Endpoint.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		9BF2E79520B0D95F00D09D2D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9BF2E7A120B1585D00D09D2D /* Object.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9BF2E79620B0D96600D09D2D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9BF2E79720B0D96A00D09D2D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9BF2E78420B0D54C00D09D2D /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9BF2E79A20B0DB1C00D09D2D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9BF2E79B20B0DB3200D09D2D /* Constants.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,11 +147,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9BF2E79120B0D54E00D09D2D /* Build configuration list for PBXNativeTarget "News" */;
 			buildPhases = (
-				022EA15E576E0B359A3F5B17 /* [CP] Check Pods Manifest.lock */,
+				44DAB70E8F524E8E3CB3D82D /* [CP] Check Pods Manifest.lock */,
 				9BF2E77B20B0D54C00D09D2D /* Sources */,
 				9BF2E77C20B0D54C00D09D2D /* Frameworks */,
 				9BF2E77D20B0D54C00D09D2D /* Resources */,
-				A8A555297B60798646DCBCB7 /* [CP] Embed Pods Frameworks */,
+				060994B02B9BE6FD973A608C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -157,7 +209,31 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		022EA15E576E0B359A3F5B17 /* [CP] Check Pods Manifest.lock */ = {
+		060994B02B9BE6FD973A608C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-News/Pods-News-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CodableAlamofire/CodableAlamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableAlamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-News/Pods-News-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		44DAB70E8F524E8E3CB3D82D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -175,28 +251,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A8A555297B60798646DCBCB7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-News/Pods-News-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-News/Pods-News-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -204,8 +258,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BF2E79920B0DAC700D09D2D /* NetworkingManager.swift in Sources */,
 				9BF2E78520B0D54C00D09D2D /* ViewController.swift in Sources */,
 				9BF2E78320B0D54C00D09D2D /* AppDelegate.swift in Sources */,
+				9BF2E7A220B1585D00D09D2D /* Object.swift in Sources */,
+				9BF2E79C20B0DB3200D09D2D /* Constants.swift in Sources */,
+				9BF2E79E20B0DBCD00D09D2D /* Endpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,7 +411,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K79SDG2A3G;
 				INFOPLIST_FILE = News/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ru.blinovdev.News;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -369,7 +431,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K79SDG2A3G;
 				INFOPLIST_FILE = News/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ru.blinovdev.News;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
