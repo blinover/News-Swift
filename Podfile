@@ -5,5 +5,6 @@ target 'News' do
   pod 'Alamofire', '~> 4.7'
   pod 'RealmSwift'
   pod 'CodableAlamofire'
+  pod 'FaveButton'
 
 end

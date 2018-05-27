@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="123" id="KGk-i7-Jjw" customClass="SourceTableViewCell" customModule="News" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="123"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="122.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Yg-67-4Yj">
+                        <rect key="frame" x="5" y="5" width="310" height="112.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V9z-Rg-gFH">
+                                <rect key="frame" x="8" y="8" width="294" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uML-8t-vOE">
+                                <rect key="frame" x="8" y="34.5" width="294" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7fc-x0-ifk" customClass="FaveButton" customModule="FaveButton">
+                                <rect key="frame" x="267" y="69" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="CJk-VA-yNR"/>
+                                    <constraint firstAttribute="width" constant="35" id="q6y-nq-MGf"/>
+                                </constraints>
+                                <state key="normal" image="rating_star"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                        <color key="value" red="0.48392093180000001" green="0.82959473130000005" blue="0.97601562740000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="dotSecondColor">
+                                        <color key="value" red="0.1647058824" green="0.42745098040000001" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="favoriteButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="JCa-1t-Npx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91943179870000002" green="0.95906149419999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uML-8t-vOE" firstAttribute="leading" secondItem="7Yg-67-4Yj" secondAttribute="leading" constant="8" id="4ys-Qw-Ua7"/>
+                            <constraint firstItem="uML-8t-vOE" firstAttribute="top" secondItem="V9z-Rg-gFH" secondAttribute="bottom" constant="5" id="9kk-fA-dqX"/>
+                            <constraint firstAttribute="trailing" secondItem="V9z-Rg-gFH" secondAttribute="trailing" constant="8" id="G1f-nZ-tHy"/>
+                            <constraint firstAttribute="bottom" secondItem="7fc-x0-ifk" secondAttribute="bottom" constant="8" id="Npo-Lg-2gk"/>
+                            <constraint firstAttribute="trailing" secondItem="uML-8t-vOE" secondAttribute="trailing" constant="8" id="OJd-hS-ayV"/>
+                            <constraint firstAttribute="trailing" secondItem="7fc-x0-ifk" secondAttribute="trailing" constant="8" id="S7v-iR-7gj"/>
+                            <constraint firstItem="V9z-Rg-gFH" firstAttribute="top" secondItem="7Yg-67-4Yj" secondAttribute="top" constant="8" id="UEJ-Ap-VME"/>
+                            <constraint firstItem="7fc-x0-ifk" firstAttribute="top" secondItem="uML-8t-vOE" secondAttribute="bottom" constant="5.5" id="Ydf-kN-tXt"/>
+                            <constraint firstItem="V9z-Rg-gFH" firstAttribute="leading" secondItem="7Yg-67-4Yj" secondAttribute="leading" constant="8" id="a2Z-Is-OpH"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="7Yg-67-4Yj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="30c-tj-bWl"/>
+                    <constraint firstItem="7Yg-67-4Yj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="5IB-Kz-BBN"/>
+                    <constraint firstAttribute="bottom" secondItem="7Yg-67-4Yj" secondAttribute="bottom" constant="5" id="TbY-jU-Icm"/>
+                    <constraint firstAttribute="trailing" secondItem="7Yg-67-4Yj" secondAttribute="trailing" constant="5" id="xcM-ub-Vh3"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="favoriteButton" destination="7fc-x0-ifk" id="XmE-i9-dGl"/>
+                <outlet property="subtitleLabel" destination="uML-8t-vOE" id="yD8-iZ-Qd9"/>
+                <outlet property="titleLabel" destination="V9z-Rg-gFH" id="2AO-JS-Fw0"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="93.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="rating_star" width="512" height="512"/>
+    </resources>
+</document>

@@ -18,7 +18,7 @@ struct Constatns {
         static let sources = "/sources"
         
         //Keypaths
-        static let sourcesKeyPath = "/sources"
+        static let sourcesKeyPath = "sources"
     }
     
 }
