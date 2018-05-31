@@ -29,7 +29,7 @@ class SourceTableViewCell: BaseTableViewCell {
     @IBAction func favoriteButtonPressed(_ sender: FaveButton) {
         guard let model = self.model else { return }
         if let closure = model.onClickFavorite {
-            closure(model.source)
+            closure(model ,model.source)
         }
     }
 }

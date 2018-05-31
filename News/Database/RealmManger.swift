@@ -17,18 +17,39 @@ struct RealmManager {
 
     
     func fetchFavoriteSources() -> [Source] {
-        return Array(realm.objects(Source.self))
+        return Array(realm.objects(Source.self).filter("isFavorite = true"))
     }
     
-    func isSourceInFavorites(_ source: Source) -> Bool {
-        let sources = realm.objects(Source.self).filter("id contains '\(source.id)'")
-        if sources.count > 0 {
-            return true
+    func fetchCachedSources() -> [Source] {
+        return Array(realm.objects(Source.self).filter("isCached = true"))
+    }
+    
+    func updateCachedSource(_ sources: [Source]) {
+        let cachedSources = fetchCachedSources()
+        deleteObjects(cachedSources)
+        
+        for source in sources {
+            source.isFavorite = false
+            source.isCached = true
+            add(source)
         }
-        return false
     }
     
+    func isSourceInFavorites(_ source: Source) -> (favorite: Bool, source: Source?) {
+        let sources = realm.objects(Source.self).filter("id contains '\(source.id)' AND isFavorite = true")
+        if sources.count > 0 {
+            return (true, sources.first!)
+        }
+        return (false, nil)
+    }
     
+    func deleteObjects(_ objects: [Object]) {
+        try! realm.write {
+            for object in objects {
+                realm.delete(object)
+            }
+        }
+    }
     
     func delete(_ object: Object) {
         try! realm.write {

@@ -19,6 +19,9 @@ class Source: Object, Decodable {
     @objc dynamic var language: String = ""
     @objc dynamic var country: String = ""
     
+    @objc dynamic var isFavorite: Bool = false
+    @objc dynamic var isCached: Bool = false
+
     private enum SourceCodingKeys: String, CodingKey {
         case id
         case name
@@ -53,5 +56,16 @@ class Source: Object, Decodable {
         
         
         self.init(id: id, name: name, descript: descript, url: url, category: category, language: language, country: country)
+    }
+    
+    convenience init(source: Source) {
+        self.init()
+        self.id         = source.id
+        self.name       = source.name
+        self.descript   = source.descript
+        self.url        = source.url
+        self.category   = source.category
+        self.language   = source.language
+        self.country    = source.country
     }
 }

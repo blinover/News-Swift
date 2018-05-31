@@ -6,5 +6,7 @@ target 'News' do
   pod 'RealmSwift'
   pod 'CodableAlamofire'
   pod 'FaveButton'
+  pod 'SDWebImage'
+  pod 'SVProgressHUD'
 
 end

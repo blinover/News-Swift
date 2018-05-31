@@ -8,12 +8,18 @@ PODS:
   - Realm/Headers (3.5.0)
   - RealmSwift (3.5.0):
     - Realm (= 3.5.0)
+  - SDWebImage (4.3.3):
+    - SDWebImage/Core (= 4.3.3)
+  - SDWebImage/Core (4.3.3)
+  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
   - CodableAlamofire
   - FaveButton
   - RealmSwift
+  - SDWebImage
+  - SVProgressHUD
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -22,6 +28,8 @@ SPEC REPOS:
     - FaveButton
     - Realm
     - RealmSwift
+    - SDWebImage
+    - SVProgressHUD
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
@@ -29,7 +37,9 @@ SPEC CHECKSUMS:
   FaveButton: cfcbc5e73da159c4f916613da5687357b5bb4783
   Realm: 0378021c424e4e2bd6a0e63b27881e929d9b9ad1
   RealmSwift: 3322562622fda2ad596985ead4d8d8be30cf838c
+  SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: e92967983eed4b59e50610935dd83fa42dd933b6
+PODFILE CHECKSUM: 64fdc0c910e2988ce9a4dac1ef5f6b5ccf2a6fe4
 
 COCOAPODS: 1.5.0

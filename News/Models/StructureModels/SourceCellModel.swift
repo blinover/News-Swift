@@ -7,7 +7,7 @@
 //
 
 import Foundation
-typealias OnClickFavoriteButton = (_ source: Source) -> Void
+typealias OnClickFavoriteButton = (_ model: SourceCellModel,_ source: Source) -> Void
 
 class SourceCellModel: BaseCellModel {
     
@@ -23,8 +23,7 @@ class SourceCellModel: BaseCellModel {
         self.source = source
         self.title = source.name
         self.subtitle = source.descript
-        self.isFavorite = RealmManager.shared.isSourceInFavorites(source)
-        print(self.isFavorite)
+        self.isFavorite = RealmManager.shared.isSourceInFavorites(source).favorite
     }
 
 }
